@@ -52,6 +52,7 @@ body:
   attributes:
     label: Manifests
     description: Insert manifests relevant to the issue
+    render: YAML
   validations:
     required: false
 - type: textarea
