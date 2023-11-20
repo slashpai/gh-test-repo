@@ -60,7 +60,7 @@ body:
     label: Manifests
     description: Insert manifests relevant to the issue
   validations:
-    required: false
+    required: true
 - type: textarea
   attributes:
     label: Anything else?
