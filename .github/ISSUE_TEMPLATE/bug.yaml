@@ -1,5 +1,5 @@
 name: 🐞 Bug
-description: File a bug/issue
+description: Report a bug encountered while using prometheus-operator
 title: "[BUG] <title>"
 labels: ["kind/bug", "needs-triage"]
 body:
