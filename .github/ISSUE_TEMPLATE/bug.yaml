@@ -44,7 +44,8 @@ body:
     value: |
         - Prometheus Operator version (please provide operator version and not kube-prometheus/helm chart version):
           ```console
-          Try kubectl -n monitoring describe deployment prometheus-operator 
+          Try kubectl -n monitoring describe deployment prometheus-operator
+          # paste output here
           ```
         - Kubernetes Version:
           ```console
