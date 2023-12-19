@@ -53,14 +53,12 @@ body:
     description: |
       examples:
         - **Kubernetes Version**: 1.27
-        - **Kubernetes Cluster Type**: kind
     value: |
         - Kubernetes Version:
           ```console
           kubectl version --output=json
           # paste output here
           ```
-        - Kubernetes Cluster Type:
   validations:
     required: true
 - type: textarea
@@ -69,8 +67,6 @@ body:
     description: |
       examples:
         - **Kubernetes Cluster Type**: kind
-    value: |
-        - Kubernetes Cluster Type:
   validations:
     required: true
 - type: textarea
