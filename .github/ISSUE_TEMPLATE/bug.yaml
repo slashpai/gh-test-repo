@@ -71,6 +71,14 @@ body:
     required: true
 - type: textarea
   attributes:
+    label: How did you deploy Prometheus-Operator?
+    description: |
+      examples:
+        - prometheus-operator/kube-prometheus, helm chart, yaml manifests, 
+  validations:
+    required: true
+- type: textarea
+  attributes:
     label: Manifests
     description: Insert manifests relevant to the issue
   validations:
