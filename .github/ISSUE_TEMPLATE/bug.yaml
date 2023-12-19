@@ -35,25 +35,42 @@ body:
     required: false
 - type: textarea
   attributes:
-    label: Environment
+    label: Prometheus Operator Version
     description: |
       examples:
         - **Prometheus Operator version**: v0.69.1
-        - **Kubernetes Version**: 1.27
-        - **Kubernetes Cluster Type**: kind
     value: |
         - Prometheus Operator version (please provide operator version and not kube-prometheus/helm chart version):
           ```console
           Try kubectl -n monitoring describe deployment prometheus-operator
           # paste output here
           ```
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Kubernetes Version
+    description: |
+      examples:
+        - **Kubernetes Version**: 1.27
+        - **Kubernetes Cluster Type**: kind
+    value: |
         - Kubernetes Version:
           ```console
           kubectl version --output=json
           # paste output here
           ```
         - Kubernetes Cluster Type:
-    render: markdown
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Kubernetes Cluster Type
+    description: |
+      examples:
+        - **Kubernetes Cluster Type**: kind
+    value: |
+        - Kubernetes Cluster Type:
   validations:
     required: true
 - type: textarea
