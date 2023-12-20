@@ -5,7 +5,7 @@ body:
 - type: markdown
   attributes:
     value: |
-      Note: This repository is about prometheus-operator itself, if you have questions about:
+      ***Note:** This repository is about prometheus-operator itself, if you have questions about:
       - kube-prometheus setup, go to [kube-prometheus](https://github.com/prometheus-operator/kube-prometheus)
       - helm installation, go to [kube-prometheus-stack-helm-chart](https://github.com/prometheus-community/helm-charts)
 - type: textarea
@@ -26,8 +26,12 @@ body:
       description: A clear and concise description of any alternative solutions or features you've considered.
 - type: textarea
   attributes:
-      label: Environment
-      description: A clear and concise description of any alternative solutions or features you've considered.
+      label: Environment Information
+      description: Please provide any additional information about your installation.
+      value: |
+        ## Environment
+        Kubernetes Version:
+        Prometheus-Operator Version:
 - type: textarea
   attributes:
     label: Additional context
