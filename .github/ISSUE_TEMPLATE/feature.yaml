@@ -6,8 +6,8 @@ body:
   attributes:
     value: |
       ***Note:** This repository is about prometheus-operator itself, if you have questions about:
-      - kube-prometheus setup, go to [kube-prometheus](https://github.com/prometheus-operator/kube-prometheus)
-      - helm installation, go to [kube-prometheus-stack-helm-chart](https://github.com/prometheus-community/helm-charts)
+        - kube-prometheus setup, go to [kube-prometheus](https://github.com/prometheus-operator/kube-prometheus)
+        - helm installation, go to [kube-prometheus-stack-helm-chart](https://github.com/prometheus-community/helm-charts)
 - type: textarea
   attributes:
     label: What is missing? Please describe.
