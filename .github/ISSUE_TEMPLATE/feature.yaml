@@ -38,4 +38,4 @@ body:
     description: Add any other context or screenshots about the feature request here.
 - type: markdown
   attributes: 
-    value: Feel free to ask questions in \#prometheus-operator on [Kubernetes Slack](kubernetes.slack.com)!
+    value: Feel free to ask questions in \#prometheus-operator on [Kubernetes Slack](https://kubernetes.slack.com)!
