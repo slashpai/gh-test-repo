@@ -2,10 +2,6 @@ name: 🐞 Bug
 description: Report a bug related to the Prometheus operator
 labels: ["kind/bug", "needs-triage"]
 body:
-- type: markdown
-  attributes:
-    value: |
-      Thanks for taking the time to fill out this bug report! Please make sure to fill out the entire form below, providing as much context as you can in order to help us triage and track down your bug as quickly as possible.
 - type: checkboxes
   attributes:
     label: Is there an existing issue for this?
