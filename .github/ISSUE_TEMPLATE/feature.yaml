@@ -11,9 +11,9 @@ body:
 - type: textarea
   attributes:
     label: What is missing? Please describe.
-    description: A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+    description: A clear and concise description of what is missing currently.
   validations:
-      required: true
+    required: true
 - type: textarea
   attributes:
     label: Describe the solution you'd like
@@ -34,4 +34,4 @@ body:
     description: Add any other context or screenshots about the feature request here.
 - type: markdown
   attributes: 
-    value: Feel free to ask questions in #prometheus-operator on [Kubernetes Slack](kubernetes.slack.com)!
+    value: Feel free to ask questions in \#prometheus-operator on [Kubernetes Slack](kubernetes.slack.com)!
