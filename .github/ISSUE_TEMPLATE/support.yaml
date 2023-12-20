@@ -1,5 +1,5 @@
 name: 🚢 Support
-description: Support needed with Prometheus operator
+description: Support needed with Prometheus Operator
 labels: ["kind/support", "needs-triage"]
 body:
 - type: markdown
