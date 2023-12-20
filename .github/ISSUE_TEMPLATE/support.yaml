@@ -10,9 +10,9 @@ body:
             - helm installation, go to [kube-prometheus-stack-helm-chart](https://github.com/prometheus-community/helm-charts)
 - type: checkboxes
   attributes:
-    label: I have checked existing documentation in [prometheus-operator.dev](https://prometheus-operator.dev)?
+    label: I have checked existing documentation
     description: |
-      Before filing a request, please be sure you have checked existing documentation.
+      Before filing a request, please be sure you have checked existing documentation in [prometheus-operator.dev](https://prometheus-operator.dev)?.
     options:
     - label: I have checked the existing documentation
       required: true
