@@ -43,6 +43,7 @@ body:
           Try kubectl -n <namespace> describe deployment/prometheus-operator
           # paste output here
           ```
+    render: shell
   validations:
     required: true
 - type: textarea
@@ -50,6 +51,7 @@ body:
     label: Kubernetes Version
     description: |
       Paste the output of `kubectl version -o yaml`
+    render: yaml
   validations:
     required: true
 - type: dropdown
@@ -84,6 +86,7 @@ body:
   attributes:
     label: Manifests
     description: Insert manifests relevant to the issue
+    render: yaml
   validations:
     required: false
 - type: textarea
@@ -92,7 +95,7 @@ body:
     description: |
       Please provide prometheus-operator log output
       This will be automatically formatted into code, so no need for backticks.
-    render: bash
+    render: shell
   validations:
     required: true
 - type: textarea
