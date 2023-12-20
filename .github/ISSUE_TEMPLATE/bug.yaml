@@ -36,7 +36,9 @@ body:
 - type: textarea
   attributes:
     label: Prometheus Operator Version
-    description: Provide the prometheus-operator version used
+    description: |
+      Provide the prometheus-operator version used
+      This will be automatically formatted into code, so no need for backticks.
     placeholder: |
         - Prometheus Operator version (please provide operator version and not kube-prometheus/helm chart version):
           ```console
@@ -51,6 +53,7 @@ body:
     label: Kubernetes Version
     description: |
       Paste the output of `kubectl version -o yaml`
+      This will be automatically formatted into code, so no need for backticks.
     render: yaml
   validations:
     required: true
@@ -85,7 +88,9 @@ body:
 - type: textarea
   attributes:
     label: Manifests
-    description: Insert manifests relevant to the issue
+    description: |
+      Insert manifests relevant to the issue
+      This will be automatically formatted into code, so no need for backticks.
     render: yaml
   validations:
     required: false
