@@ -11,7 +11,7 @@ body:
 - type: markdown
   attributes:
     value: |
-      Before filing a request, please be sure you have checked existing documentation in [prometheus-operator.dev](https://prometheus-operator.dev)?
+      Are you aware that we have documentation at [our website](https://prometheus-operator.dev)? There's a chance you'll find answers faster over there 🙂
 - type: textarea
   attributes:
     label: What happened?
