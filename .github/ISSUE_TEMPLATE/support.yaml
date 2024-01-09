@@ -1,4 +1,4 @@
-name: 🚢 Support
+name: ✋ Support
 description: Support needed with Prometheus Operator
 labels: ["kind/support", "needs-triage"]
 body:
