@@ -2,28 +2,20 @@ name: Test artifact upload
 
 on: [push]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  build_and_test:
-    runs-on: ubuntu-latest
-    steps:
-    - run: mkdir -p /tmp
-    - run: echo hello > /tmp/world.txt
-    - uses: actions/upload-artifact@v4
-      with:
-        name: my-artifact
-        path: /tmp/world.txt
   test-calculator:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Import environment variables from file
-      run: cat ".github/env" >> $GITHUB_ENV
+    - name: checkout repo
+      uses: actions/checkout@v4
     - name: Install Go
       uses: actions/setup-go@v5
       with:
         go-version: '1.23.1'
         check-latest: true
-  unit-testing:
-    runs-on: ubuntu-latest
-    steps:
-    - run: echo 'hello'
+    - name: Test code
+      run: cd calculator && go test -v
