@@ -12,3 +12,18 @@ jobs:
       with:
         name: my-artifact
         path: /tmp/world.txt
+  test-calculator:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Import environment variables from file
+      run: cat ".github/env" >> $GITHUB_ENV
+    - name: Install Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: '1.23.1'
+        check-latest: true
+  unit-testing:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo 'hello'
