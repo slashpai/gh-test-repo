@@ -13,6 +13,19 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  changed-files:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: get changed files
+      id: changed_files
+      run: |
+        echo markdown_files=$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep -i .md$ | xargs) >> $GITHUB_OUTPUT
+    - run: |
+        echo "${{ steps.changed_files.outputs.markdown_files}}"
   test-calculator:
     runs-on: ubuntu-latest
     steps:
