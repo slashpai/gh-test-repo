@@ -302,13 +302,17 @@ func TestDivide2(t *testing.T) {
 			scenario:    "zero division",
 			num1:        5,
 			num2:        0,
-			expectedErr: true,
+			expectedErr: false,
 		},
 	}
 
 	for _, tc := range testcases {
 		t.Run(fmt.Sprintf("case %s", tc.scenario), func(t *testing.T) {
 			res, err := Divide(tc.num1, tc.num2)
+			if err != nil && !tc.expectedErr {
+				t.Fatalf("expected no error but got error for num1: %d num2: %d", tc.num1, tc.num2)
+
+			}
 			if err == nil && tc.expectedErr {
 				t.Fatalf("expected error but got nil for num1: %d num2: %d", tc.num1, tc.num2)
 			}
