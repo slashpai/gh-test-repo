@@ -29,3 +29,9 @@ jobs:
         check-latest: true
     - name: Test code
       run: cd calculator && go test -v
+  comment-pr:
+    needs: test-calculator
+    if: ${{ failure() }}
+    uses: ./.github/workflows/comment.yaml
+    with:
+      message: 'check your code in calculator package'
