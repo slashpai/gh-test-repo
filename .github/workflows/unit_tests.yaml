@@ -29,3 +29,12 @@ jobs:
         check-latest: true
     - name: Test code
       run: cd calculator && go test -v
+  comment-pr:
+    permissions:
+      pull-requests: write
+    needs: test-calculator
+    if: ${{ failure() }}
+    uses: ./.github/workflows/comment.yaml
+    with:
+      message: |
+        '`test-calculator` job is failing, check your code in calculator package/review test'
