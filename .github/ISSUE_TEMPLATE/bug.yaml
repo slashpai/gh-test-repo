@@ -27,6 +27,21 @@ body:
     required: true
 - type: textarea
   attributes:
+    label: System Information
+    description: |
+      Provide the operating system info here
+      This will be automatically formatted into code, so no need for backticks.
+    placeholder: |
+        - Operating System info:
+          ```console
+          insert output of `uname -srm` here
+          # paste output here
+          ```
+    render: shell
+  validations:
+    required: true
+- type: textarea
+  attributes:
     label: Alertmanager Version
     description: |
       Provide the alertmanager version used
